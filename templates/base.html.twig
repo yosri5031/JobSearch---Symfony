@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}ESPRIMSjob{% endblock %}</title>
+        
+       
+        {% block stylesheets %}
+        {# methode cdn #}
+           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+crossorigin="anonymous"/>
+
+            <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}" />
+
+        {% endblock %}
+
+        {% block javascripts %}
+           
+        {% endblock %}
+    </head>
+    <body>
+    <h1 class="text-center"> {% block titre %} Bienvenue au ESPRIMS job search {% endblock %} </h1>
+        {% block body %}
+
+        {% endblock %}
+        
+    </body>
+</html>
