@@ -38,7 +38,16 @@ class JobRepository extends ServiceEntityRepository
             $this->getEntityManager()->flush();
         }
     }
-
+// language DQL 
+public function recherche($s)
+{
+    //select * from job where ...
+    return $this->createQueryBuilder('m')
+    ->where('m.type LIKE :critere')
+    ->setParameter('critere','%'.$s.'%')
+    ->getQuery()
+    ->getResult();
+}
 //    /**
 //     * @return Job[] Returns an array of Job objects
 //     */

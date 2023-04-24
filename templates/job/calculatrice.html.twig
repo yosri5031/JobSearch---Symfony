@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+{% block title %} Calculatrice {% endblock %}
+{% block body %}
+
+<div class="calculator">
+    <form action="" method="post">
+        <input type="text" name="number1" placeholder="Number 1">
+        <select name="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="*">*</option>
+        </select> 
+        <input type="text" name="number2" placeholder="Number 2"> 
+        <input type="submit" name="submit" value="Calculate!"> 
+
+        {% if result is defined %} 
+            Result: {{ result }} 
+        {% endif %} 
+
+    </form> 
+</div>
+
+{% endblock %}

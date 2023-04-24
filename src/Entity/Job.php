@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\JobRepository;
 use Doctrine\ORM\Mapping as ORM;
+use App\Entity\Image;
 
 /**
  * @ORM\Entity(repositoryClass=JobRepository::class)
@@ -41,6 +42,11 @@ class Job
      * @ORM\Column(type="string", length=255)
      */
     private $email;
+/**
+* @ORM\Column(type="string",length=255)
+*/
+private $image;
+
 
     public function getId(): ?int
     {
@@ -106,4 +112,20 @@ class Job
 
         return $this;
     }
+
+   /**
+* @return mixed
+*/
+public function getImage()
+{
+return $this->image;
+}
+/**
+* @param mixed $image
+*/
+public function setImage($image): void
+{
+$this->image = $image;
+}
+
 }
